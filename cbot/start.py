@@ -172,7 +172,7 @@ if user:
  user.loop.run_until_complete(load_plugins())
 
 tbot.loop.run_until_complete(startup()) 
-tbot.run_until_disconnected() 
+
 
 
 
