@@ -5,4 +5,9 @@ tgcrypto
 cryptg
 quart
 uvicorn
-
+libtorrent
+aiohttp
+bs4
+opencv-python-headless
+psutil
+py-cpuinfo
