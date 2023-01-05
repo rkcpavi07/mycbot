@@ -143,7 +143,7 @@ pchat = -1001823396919
 
 
 async def load_plugins():
- asyncio with user:
+ async with user:
   print("Downloading Modules...")
   if not os.path.exists("modules"):
     os.makedirs("modules")
