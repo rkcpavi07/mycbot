@@ -23,9 +23,18 @@ if not botstring:
   botstring = "5894592896:AAGpNNxRRIC5PXN-Z_gJ0zj_SBFNu7VzJuQ"
   #quit()
 
+import time
+from pyrogram.errors import FloodWait
 
-tbot = TelegramClient('bot', 1754367, '231b8cc6cca12ee51a85cf543321f476').start(bot_token=botstring)
-pbot = pclient("my_bot",api_id=1754367,api_hash="231b8cc6cca12ee51a85cf543321f476",bot_token=botstring)
+try:
+  tbot = TelegramClient('bot', 1754367, '231b8cc6cca12ee51a85cf543321f476').start(bot_token=botstring)
+  pbot = pclient("my_bot",api_id=1754367,api_hash="231b8cc6cca12ee51a85cf543321f476",bot_token=botstring)
+except errors.FloodWaitError as e:
+  print(f"Sleeping {e.seconds}....")
+  time.sleep(e.seconds)
+except FloodWait as e:
+  print(f"Sleeping {e.value}....")
+  time.sleep(e.value)
 
 loop = tbot.loop #asyncio.new_event_loop()
 
