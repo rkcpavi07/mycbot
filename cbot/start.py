@@ -128,7 +128,6 @@ async def bst():
  await tbot.send_message("@rekcah05","Starting...")
 
 async def startup():
- await tbot.start()
  await tbot.send_message("@rekcah05","Started..")
  print("Started")
  config = uvicorn.Config("__main__:app", port=port,host="0.0.0.0", log_level="error")
@@ -144,8 +143,8 @@ pchat = -1001823396919
 
 
 async def load_plugins():
+ asyncio with user:
   print("Downloading Modules...")
-  await user.start()
   if not os.path.exists("modules"):
     os.makedirs("modules")
   print("Downloading Modules...")
