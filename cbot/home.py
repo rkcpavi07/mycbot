@@ -20,8 +20,7 @@ botstring = os.environ.get("token")
 
 if not botstring:
   print("add token in env")
-  botstring = "5894592896:AAGpNNxRRIC5PXN-Z_gJ0zj_SBFNu7VzJuQ"
-  #quit()
+  quit()
 
 import time
 from pyrogram.errors import FloodWait
